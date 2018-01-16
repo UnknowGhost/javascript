@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monkeyshuffle</title>
+
+    <style>
+        html {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+        body {
+         font-family: 'Matura MT Script Capitals';
+            text-align: center;
+        }
+        img {
+            height: 200px;
+            width: 200px;
+            border: 0px;
+        }
+        #pics {
+            height: 600px;
+            width: 600px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>MonkeyShuffle</h1>
+<div id="pics">
+    <img src="pictures/pistol1.jpg">
+    <img src="pictures/pistol2.jpg">
+    <img src="pictures/pistol3.jpg">
+    <img src="pictures/pistol4.jpg">
+    <img src="pictures/pistol5.jpg">
+    <img src="pictures/pistol6.jpg">
+    <img src="pictures/pistol7.jpg">
+    <img src="pictures/pistol8.jpg">
+    <img src="pictures/pistol9.jpg">
+</div>
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+    var random = 0;
+    for (var i = 0; i< plaatjes.length; i++) {
+        random = Math.floor((Math.random() * 9) + 1);
+        plaatjes[i].src = "pictures/pistol" + random + ".jpg";
+    }
+</script>
+
+</body>
+</html>
